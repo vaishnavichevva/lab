@@ -15,7 +15,11 @@ pipeline {
                 sh 'npm install'
             }
         }
-
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t vaishnavichevva/lab:1 .'
+            }
+        }
         // stage('Build Docker Image') {
         //     steps {
         //         sh '''
