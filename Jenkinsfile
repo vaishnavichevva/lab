@@ -31,11 +31,11 @@ pipeline {
         //     }
         // }
         
-        // stage('Create container') {
-        //     steps {
-        //         sh 'docker run -d -p 3000:8080 vaishnavichevva/lab:${BUILD_NUMBER}'
-        //     }
-        // }
+        stage('Create container') {
+            steps {
+                sh 'docker run -d -p 3000:8080 vaishnavichevva/lab:${BUILD_NUMBER}'
+            }
+        }
 
 
 
